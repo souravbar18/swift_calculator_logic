@@ -1,25 +1,17 @@
-# Swift Calculator Logic
+# Swift Logic Calculator
 
-A logic-driven Command Line Interface (CLI) calculator built using **Swift**. This project focuses on implementing core programming concepts like infinite loops, user input handling, and conditional logic without using a Graphical User Interface (GUI).
+A console-based calculator application built with **Swift**. This project demonstrates advanced programming patterns such as **Enums with Raw Values**, **Tuples**, and **Safe Error Handling** using `guard` statements.
 
-### 🚀 Features
-- **Continuous Execution:** Uses nested `while` loops to keep the program running until the user explicitly exits.
-- **Arithmetic Operations:** Supports Addition, Subtraction, Multiplication, and Division.
-- **Modular Navigation:** Users can choose an operation and stay within that specific loop until they finish their tasks.
-- **Dynamic Exit:** Allows users to return to the main menu or close the entire application by typing specific commands.
+### 🚀 Key Features
+- **Infinite Calculation Loop:** Keeps the app running for multiple operations until the user types `exit`.
+- **Enum-Driven Operators:** Uses a dedicated `Operator` Enum to handle arithmetic symbols (+, -, *, /) safely.
+- **Efficient Result Handling:** A single function returns all four basic arithmetic results using a **Tuple**, showcasing efficient data management.
+- **Smart Validation:** - Prevents crashes using `guard let` for numeric inputs.
+  - Includes a specific check for **Division by Zero** to ensure program stability.
+- **User-Friendly Interface:** Clean console output with emoticons and clear dividers.
 
-### 🛠️ Concepts Applied
-- **Looping:** Utilized `while` loops for handling unlimited user inputs.
-- **Conditionals:** Implemented logic using `if-else` and `switch` statements to direct user flow.
-- **Data Types:** Handled String-to-Double conversions for precise calculations.
-- **State Management:** Managed program states to ensure smooth transitions between different calculation modes.
-
-### 📖 How to Run
-1. Copy the code from `main.swift`.
-2. Open **Xcode** or any online **Swift Compiler**.
-3. Paste the code and run the program.
-4. Follow the on-screen console instructions to perform calculations.
-
----
-*This project is part of my journey to master iOS Development and Swift programming.*
-"A logic-based calculator built with Swift focusing on fundamental programming concepts like while loops, conditional statements, and user input handling via the console."
+### 🛠️ Technical Implementation
+- **Data Structures:** Used `Enum` for clean and readable operator selection.
+- **Functionality:** Implemented a multi-return function:
+  ```swift
+  func calculation(num1: Double, num2: Double) -> (sum: Double, sub: Double, mul: Double, div: Double)
